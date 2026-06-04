@@ -12,7 +12,7 @@ import Observation
 final class AppCoordinator {
 
     // MARK: Root flow
-    var flow: RootFlow?
+    var flow: RootFlow = .intro
     
     var authCoordinator = AuthCoordinator()
     
@@ -60,8 +60,6 @@ extension AppCoordinator {
            flow = .main
        } else if UserDefaults.introHasBeenSeen {
             flow = .auth
-       } else {
-           flow = .intro
        }
     }
 }

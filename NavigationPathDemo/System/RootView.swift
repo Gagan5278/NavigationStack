@@ -18,8 +18,6 @@ struct RootView: View {
             AuthContainerView(coordinator: coordinator)
         case .main:
             MainTabView(coordinator: coordinator)
-        case .none:
-            EmptyView()
         } 
     }
 }
