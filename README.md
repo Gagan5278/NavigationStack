@@ -1,4 +1,4 @@
-### Demo app which explain how to use NavigationStack in a complex prodcution level app where multiple navigation, sheets and fullCover are maintained n the app.With minor changes a screen can be added or deleted. App is loosely coupled which allows better testing of the app.
+### Demo app which explain how to use NavigationStack in a complex prodcution level app where multiple navigation, sheets and fullCover are maintained in the app.With minor changes a screen can be added or deleted. App is loosely coupled which allows better testing of the app.
 
 
 #### App Structure
