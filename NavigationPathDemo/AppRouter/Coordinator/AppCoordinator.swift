@@ -12,7 +12,7 @@ import Observation
 final class AppCoordinator {
 
     // MARK: Root flow
-    var flow: RootFlow = .auth
+    var flow: RootFlow?
     
     var authCoordinator = AuthCoordinator()
     
@@ -25,9 +25,19 @@ final class AppCoordinator {
     var settingCoordinator = SettingCoordinator()
     var deviceCoordinator = DeviceCoordinator()
     
+    init() {
+        updatePath()
+    }
+    
+    func introSeen() {
+        flow = .auth
+        UserDefaults.introHasBeenSeen = true
+    }
+    
     func loginSuccess() {
         authCoordinator = AuthCoordinator()
         flow = .main
+        UserDefaults.isLoggedInUser = true
     }
     
     func logout() {
@@ -39,5 +49,19 @@ final class AppCoordinator {
 
         selectedTab = .home
         flow = .auth
+        
+        UserDefaults.isLoggedInUser = false
+    }
+}
+
+extension AppCoordinator {
+    func updatePath() {
+        if UserDefaults.isLoggedInUser {
+           flow = .main
+       } else if UserDefaults.introHasBeenSeen {
+            flow = .auth
+       } else {
+           flow = .intro
+       }
     }
 }

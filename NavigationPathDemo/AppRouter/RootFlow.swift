@@ -6,6 +6,7 @@
 //
 
 enum RootFlow {
+    case intro
     case auth
     case main
 }

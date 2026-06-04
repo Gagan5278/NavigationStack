@@ -12,10 +12,14 @@ struct RootView: View {
     
     var body: some View {
         switch coordinator.flow {
+        case .intro:
+            IntroductionView(coordinator: coordinator)
         case .auth:
             AuthContainerView(coordinator: coordinator)
         case .main:
             MainTabView(coordinator: coordinator)
+        case .none:
+            EmptyView()
         } 
     }
 }
