@@ -7,3 +7,7 @@ https://youtube.com/shorts/bVXy_okbfaE?feature=share
 #### App flow
 
 <img width="831" height="800" alt="Image" src="https://github.com/user-attachments/assets/7e912964-387b-48fb-876c-220e72aaf21b" />
+
+
+## NOTE:
+App only demos how to handle prodcution level navigation not production level code quality. :) 
