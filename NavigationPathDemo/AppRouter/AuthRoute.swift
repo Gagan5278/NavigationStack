@@ -7,7 +7,6 @@
 
 
 enum AuthRoute {
-    case login
     case register
     case forgotPassword
 }

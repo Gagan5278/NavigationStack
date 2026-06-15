@@ -36,45 +36,14 @@ struct IntroductionView: View {
                 VStack(spacing: 16) {
                     Button {
                         updateInroState()
-                        coordinator
-                            .authCoordinator
-                            .authPath
-                            .append(AuthRoute.login)
                     } label: {
-                        Text("Login")
+                        Text("Start")
                             .font(.title3)
                             .foregroundStyle(.white)
                             .frame(maxWidth: .infinity)
                             .padding(10)
                             .background(.green)
                             .cornerRadius(10)
-                    }
-                    Button {
-                        updateInroState()
-                        coordinator
-                            .authCoordinator
-                            .authPath
-                            .append(AuthRoute.register)
-                    } label: {
-                        Text("Register")
-                            .font(.title3)
-                            .foregroundStyle(.white)
-                            .frame(maxWidth: .infinity)
-                            .padding(10)
-                            .background(.blue)
-                            .cornerRadius(10)
-                    }
-                    Button {
-                        updateInroState()
-                        coordinator
-                            .authCoordinator
-                            .sheet = .forgotPassword
-                        
-                    } label: {
-                        Text("Forget password")
-                            .font(.title3)
-                            .foregroundStyle(.red)
-                            .underline()
                     }
                 }
                 .padding()

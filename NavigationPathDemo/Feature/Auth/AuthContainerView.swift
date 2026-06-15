@@ -12,11 +12,9 @@ struct AuthContainerView: View {
     
     var body: some View {
         NavigationStack(path: $coordinator.authCoordinator.authPath) {
-            IntroductionView(coordinator:coordinator, shouldShowAuth: true)
+            LoginView(coordinator:coordinator)
                 .navigationDestination(for: AuthRoute.self) { route in
                     switch route {
-                    case .login:
-                        LoginView(coordinator: coordinator)
                     case .forgotPassword:
                         ForgotPasswordView(coordinator: coordinator)
                     case .register:

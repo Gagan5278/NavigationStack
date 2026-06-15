@@ -37,6 +37,31 @@ struct LoginView: View {
             .padding(.top)
             Text("Enter your credentil to continue. Maximun number of trial is 3")
                 .font(.callout)
+            Button {
+                coordinator
+                    .authCoordinator
+                    .authPath
+                    .append(AuthRoute.register)
+            } label: {
+                Text("Register")
+                    .font(.title3)
+                    .foregroundStyle(.white)
+                    .frame(maxWidth: .infinity)
+                    .padding(10)
+                    .background(.blue)
+                    .cornerRadius(10)
+            }
+            Button {
+                coordinator
+                    .authCoordinator
+                    .sheet = .forgotPassword
+                
+            } label: {
+                Text("Forget password")
+                    .font(.title3)
+                    .foregroundStyle(.red)
+                    .underline()
+            }
         }
         .padding(.horizontal)
         .navigationTitle("Welcome back")
